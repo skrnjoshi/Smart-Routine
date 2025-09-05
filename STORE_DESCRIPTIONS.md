@@ -1,6 +1,7 @@
 # Smart Routine App - Store Descriptions
 
 ## Short Description (80 characters max)
+
 Smart alarm & task manager for daily routine - Works completely offline!
 
 ## Full Description (4000 characters max)
@@ -76,21 +77,26 @@ Download Smart Routine today and take complete control of your daily schedule! E
 ---
 
 ## Keywords for ASO
+
 alarm clock, task manager, daily planner, routine planner, productivity app, offline planner, schedule organizer, reminder app, calendar app, time management
 
 ## Category
+
 Productivity
 
 ## Content Rating
+
 Everyone
 
 ## App Icon Requirements
+
 - 1024 x 1024 pixels
 - PNG format
 - No transparency
 - Professional design representing alarms/productivity
 
 ## Screenshots Needed (2-8 images)
+
 1. Home screen showing dashboard
 2. Alarm creation screen
 3. Task management view
@@ -99,6 +105,7 @@ Everyone
 6. Dark theme view
 
 ## Feature Graphic
+
 - 1024 x 500 pixels
 - Showcasing main app features
 - Eye-catching design for Play Store header

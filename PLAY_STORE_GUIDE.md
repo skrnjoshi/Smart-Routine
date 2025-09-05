@@ -1,6 +1,7 @@
 # Smart Routine - Play Store Ready Build
 
 ## 📱 App Information
+
 - **App Name**: Smart Routine
 - **Package**: com.skrnjoshi.smartroutine
 - **Version**: 1.0.0
@@ -10,11 +11,13 @@
 ## 🚀 Build Instructions
 
 ### Prerequisites
+
 1. Install EAS CLI: `npm install -g eas-cli`
 2. Create Expo account at https://expo.dev
 3. Login: `eas login`
 
 ### Build Commands
+
 ```bash
 # Configure EAS Build
 eas build:configure
@@ -29,6 +32,7 @@ eas build --platform android --profile production --format aab
 ## 📋 Play Store Checklist
 
 ### ✅ App Configuration Ready
+
 - [x] Package name configured
 - [x] Version code set
 - [x] Permissions declared
@@ -36,6 +40,7 @@ eas build --platform android --profile production --format aab
 - [x] Offline functionality implemented
 
 ### 📱 Required Assets
+
 - [ ] App Icon (1024x1024px)
 - [ ] Feature Graphic (1024x500px)
 - [ ] Screenshots (at least 2, up to 8)
@@ -43,6 +48,7 @@ eas build --platform android --profile production --format aab
 - [ ] Full Description (4000 characters)
 
 ### 📄 Required Documents
+
 - [ ] Privacy Policy URL
 - [ ] Terms of Service (optional)
 - [ ] App Content Rating questionnaire
@@ -50,31 +56,37 @@ eas build --platform android --profile production --format aab
 ## 🎯 App Features for Store Listing
 
 ### Main Features
+
 ✅ **Smart Alarm System**
+
 - Set multiple alarms with custom sounds
 - Recurring alarms for daily routines
 - Snooze and vibration options
 - Voice message alarms
 
 ✅ **Task Management**
+
 - Create and organize daily tasks
 - Priority levels (High, Medium, Low)
 - Category-based organization
 - Search and filter functionality
 
 ✅ **Calendar Integration**
+
 - Monthly calendar view
 - Task and alarm visualization
 - Quick event creation
 - Progress tracking
 
 ✅ **Comprehensive Settings**
+
 - Dark/Light theme support
 - Notification customization
 - Data backup and export
 - User profile management
 
 ✅ **Offline Functionality**
+
 - Works completely offline
 - Local data storage
 - No internet required
@@ -82,6 +94,7 @@ eas build --platform android --profile production --format aab
 ## 📊 App Store Optimization (ASO)
 
 ### Keywords
+
 - alarm clock
 - routine planner
 - task manager
@@ -90,9 +103,11 @@ eas build --platform android --profile production --format aab
 - schedule organizer
 
 ### Short Description (80 chars)
+
 "Smart alarm & task manager for your daily routine - Works offline!"
 
 ### Long Description Template
+
 ```
 🚀 Smart Routine - Your Ultimate Daily Companion
 
@@ -165,6 +180,7 @@ For questions about this Privacy Policy, contact: [your-email@example.com]
 ## 📱 Build Status
 
 Current Status: **Ready for Build**
+
 - App configuration: ✅ Complete
 - Dependencies: ✅ Installed
 - Assets: ⚠️ Placeholder (need custom icons)
@@ -174,6 +190,7 @@ Current Status: **Ready for Build**
 ## 🎨 Custom Assets Needed
 
 Create these assets for professional appearance:
+
 1. **App Icon** (1024x1024px) - Professional logo
 2. **Adaptive Icon** (1024x1024px) - For Android
 3. **Splash Screen** (1080x1920px) - Loading screen

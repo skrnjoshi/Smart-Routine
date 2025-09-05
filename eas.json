@@ -18,8 +18,9 @@
       }
     },
     "production": {
+      "distribution": "store",
       "android": {
-        "buildType": "aab",
+        "buildType": "app-bundle",
         "gradleCommand": ":app:bundleRelease"
       }
     },

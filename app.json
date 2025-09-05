@@ -13,9 +13,12 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "icon": "./assets/icon.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.skrnjoshi.smartroutine"
     },
     "android": {
+      "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#007AFF"
@@ -36,15 +39,14 @@
         "expo-notifications",
         {
           "color": "#007AFF",
-          "defaultChannel": "alarms",
-          "sounds": ["default"]
+          "defaultChannel": "alarms"
         }
       ],
       "expo-font"
     ],
     "extra": {
       "eas": {
-        "projectId": "your-project-id-here"
+        "projectId": "cc53abb8-261b-4ffc-a97a-d78ef553cdbc"
       }
     }
   }

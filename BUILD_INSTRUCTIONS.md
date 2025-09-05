@@ -1,6 +1,7 @@
 # Build Instructions for Smart Routine
 
 ## Prerequisites
+
 1. Create an Expo account at https://expo.dev
 2. Install EAS CLI: `npm install -g eas-cli`
 3. Login: `eas login`
@@ -8,11 +9,13 @@
 ## Build Commands
 
 ### 1. Configure EAS Build (run once)
+
 ```bash
 eas build:configure
 ```
 
 ### 2. Build APK for Play Store
+
 ```bash
 # For AAB (recommended for Play Store)
 eas build --platform android --profile production
@@ -22,6 +25,7 @@ eas build --platform android --profile production-apk
 ```
 
 ### 3. Build for Testing
+
 ```bash
 # Internal testing APK
 eas build --platform android --profile preview

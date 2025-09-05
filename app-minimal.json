@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Smart Routine",
-    "slug": "smart-routine", 
+    "slug": "smart-routine",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
@@ -12,7 +12,7 @@
     "android": {
       "permissions": [
         "android.permission.RECORD_AUDIO",
-        "android.permission.READ_EXTERNAL_STORAGE", 
+        "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.VIBRATE",
         "android.permission.WAKE_LOCK"
