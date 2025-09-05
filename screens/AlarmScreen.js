@@ -62,6 +62,30 @@ export default function AlarmScreen({ theme }) {
   );
 
   useEffect(() => {
+    // Configure notification categories
+    Notifications.setNotificationCategoryAsync("alarm", [
+      {
+        identifier: "snooze",
+        buttonTitle: "Snooze",
+        options: { opensAppToForeground: false },
+      },
+      {
+        identifier: "dismiss",
+        buttonTitle: "Dismiss",
+        options: { opensAppToForeground: false },
+      },
+    ]);
+
+    // Configure audio mode for playing sounds
+    Audio.setAudioModeAsync({
+      allowsRecordingIOS: false,
+      interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+      playsInSilentModeIOS: true,
+      shouldDuckAndroid: true,
+      interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+      playThroughEarpieceAndroid: false,
+    });
+
     const subscription = Notifications.addNotificationReceivedListener(
       async (notification) => {
         const data = notification.request.content.data;
@@ -88,6 +112,44 @@ export default function AlarmScreen({ theme }) {
               await sound.playAsync();
             } catch (error) {
               console.log("Error playing custom music:", error);
+            }
+          } else if (data.soundType === "default") {
+            // Play a repeating alarm sound
+            try {
+              // Use the downloaded alarm sound
+              const { sound } = await Audio.Sound.createAsync(
+                require("../assets/alarm.wav"),
+                {
+                  shouldPlay: true,
+                  volume: data.volume || 1.0,
+                  isLooping: true, // Keep playing until dismissed
+                }
+              );
+              await sound.playAsync();
+
+              // Store sound reference to stop it later
+              global.currentAlarmSound = sound;
+
+              // Auto-stop after 60 seconds if not dismissed
+              setTimeout(async () => {
+                if (global.currentAlarmSound) {
+                  await global.currentAlarmSound.stopAsync();
+                  await global.currentAlarmSound.unloadAsync();
+                  global.currentAlarmSound = null;
+                }
+              }, 60000);
+            } catch (error) {
+              console.log("Error playing alarm sound:", error);
+              // Fallback: create a simple beep pattern
+              const playBeep = async () => {
+                for (let i = 0; i < 10; i++) {
+                  Haptics.notificationAsync(
+                    Haptics.NotificationFeedbackType.Success
+                  );
+                  await new Promise((resolve) => setTimeout(resolve, 500));
+                }
+              };
+              playBeep();
             }
           }
 
@@ -185,8 +247,11 @@ export default function AlarmScreen({ theme }) {
 
       const identifier = await Notifications.scheduleNotificationAsync({
         content: {
-          title: "Alarm",
+          title: "⏰ ALARM",
           body: alarm.name || "Wake up!",
+          sound: true, // Enable sound
+          priority: "max",
+          categoryIdentifier: "alarm",
           data: {
             alarmId: alarm.id,
             soundType: alarm.soundType,
